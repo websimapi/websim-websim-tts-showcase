@@ -1,1 +1,71 @@
-<!-- v1: content unavailable -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Websim TTS Showcase</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+<body>
+    <header>
+        <h1>Websim Text-to-Speech Showcase</h1>
+        <p>Explore the capabilities of Websim's TTS functionality</p>
+    </header>
+    
+    <main>
+        <section id="standard-voices">
+            <h2>Standard Voices</h2>
+            <div class="voice-grid">
+                <!-- Voice options will be generated dynamically -->
+            </div>
+        </section>
+
+        <section id="custom-text">
+            <h2>Try Your Own Text</h2>
+            <textarea id="custom-text-input" placeholder="Enter your text here...">Welcome to the Websim Text-to-Speech showcase. This technology allows you to convert any text into natural-sounding speech.</textarea>
+            <div class="controls">
+                <select id="voice-select">
+                    <!-- Voice options will be generated dynamically -->
+                </select>
+                <button id="speak-button">Speak</button>
+            </div>
+            <div id="loading-indicator" class="hidden">Generating speech...</div>
+        </section>
+
+        <section id="voice-recording">
+            <h2>Voice Cloning Demo</h2>
+            <p>Record a short sample of your voice, then have the system mimic it.</p>
+            <div class="controls">
+                <button id="record-button">Record Sample (5s)</button>
+                <div id="recording-timer" class="hidden">Recording: <span>5</span>s</div>
+            </div>
+            <div class="sample-playback hidden" id="sample-container">
+                <p>Your recorded sample:</p>
+                <audio id="sample-audio" controls></audio>
+                <textarea id="clone-text-input" placeholder="Enter text to speak in your voice...">This is my voice, cloned by Websim's artificial intelligence.</textarea>
+                <button id="clone-button" disabled>Generate Cloned Speech</button>
+                <div id="clone-result" class="hidden">
+                    <p>Result:</p>
+                    <audio id="clone-audio" controls></audio>
+                </div>
+            </div>
+        </section>
+
+        <section id="audio-player">
+            <h2>Current Audio</h2>
+            <audio id="main-audio" controls></audio>
+            <div id="visualization-container">
+                <canvas id="audio-visualizer"></canvas>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Powered by <strong>Websim AI Inference</strong> capabilities</p>
+    </footer>
+
+    <script type="module" src="script.js"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>
